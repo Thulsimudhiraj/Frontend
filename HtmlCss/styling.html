@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" herf="style.css">
+        <style>
+            table,td,th{
+                border:2px solid green
+            }
+            table{
+                border-collapse: collapse;
+            }
+            .labelitem{
+                display:inline-flex;width:200px;
+            }
+            .form-element{
+                margin: 12px;
+                padding: 11px;
+            }
+        </style>
+        <title>
+            styling and recap
+        </title>
+        
+    </head>
+    <body>
+        <a href="https://google.com" target="_self">google</a>
+        <a href="https://google.com"><img src="thulsi.jpeg" width="100px" height="200px"></a>
+
+        <p>hello paragraph</p>
+        <div>hello div</div>
+        <img src="thulsi.jpeg" style="width:100px;height:200px;" alt="image here">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Roll</th>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>21</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>test2</td>
+                <td>23</td>
+                <td>103</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+                <th>Roll</th>
+            </tr>
+            <tr>
+                <td rowspan="2">test</td>
+                <td>21</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>test2</td>
+                <td>23</td>
+                <td>103</td>
+            </tr>
+        </table>
+
+        <h1>List Items</h1>
+        <ol style="list-style-type:none">
+            <li>milk</li>
+            <li>apple</li>
+            <li>banana</li>
+        </ol>
+        <ul style="list-style-type:none">
+            <li>milk</li>
+            <li>apple</li>
+            <li>banana</li> 
+        </ul>
+
+        <h1>Forms demo</h1>
+        <form name="registarionform" action="index.html" method="get">
+            <div style="width:300px;background-color: grey;border-radius: 5px;padding:5px;">
+                <span>*</span>
+                <i class="fa fa-home"></i>
+                <label>Fname:</label>
+                <input type="text " name="fname">
+            </div>
+            <div>
+                <label>Lname:</label>
+
+                <input type="text" name="lname">
+            </div>
+
+            <label>Password</label>
+            <input type="password" name="password">
+    </br>
+            <label>DOB</label>
+            <input type="date">
+            <label>
+                Upload file
+            </label>
+            <input type="file">
+            <label>Gender</label>
+            <input type="radio">Male
+            <input type="radio">Female
+            <label>Terms and agreement</label>
+            <input type="checkbox">i accept
+            <input type="submit">
+        </form>
+
+        <div style="border:2px solid;background-color: cyan;">
+
+            <p>hello paragraph</p>
+            <h1>hello heading</h1>
+            <div style="width:300px;height:100px;background:red">
+                <h3>test for nesting div</h3>
+            </div>
+        </div>
+        <div class="parent" style="display:inline-flex">
+            <div style="background-color: red;width:125px;height:125px">
+                <img src="thulsi.jpeg" width="100%">
+            </div>
+            <div style="background-color: green;width:125px;height:125px">
+                <img src="https://www.irctc.co.in/nget/assets/images/exterior.jpg" width="100%">
+            </div>
+            <div style="background-color: yellow;width:125px;height:125px">
+                <img src="thulsi.jpeg" width="100%">
+            </div>
+        </div>
+
+        <h1>Demo of audio and video</h1>
+       <audio controls>
+        <source src="audio.mpeg" type="audio/mpeg">
+       </audio>
+
+       <video controls sidth="200px" height="300px">
+        <source src="video.mp4" type="video/mp4">
+       </video>
+
+       <h1>demon for iframe</h1>
+       <iframe src="signup.html" width="400px" height="300px"></iframe>
+       <h1>hello</h1>
+       <div style="width:600px;height: 400px;background-color: cyan;">
+        <form>
+            <div style="display: inline" class="form-element">
+                <div class="labelitem">
+                    <label>
+                        First Name
+                    </label>
+                </div>
+               <div style="display:inline-flex"><input type="text" name="fname"></div>
+                
+            </div>
+            <!-- <div>
+                <label>Last Name</label>
+                <input type="text" name="lname">
+            </div> -->
+            <div class="form-element">
+    
+              <div class="labelitem">
+                <label>Password</label>
+              </div>
+              <div style="display:inline-flex">
+                <input type="password">
+              </div>
+            </div>
+               
+           </form>
+       </div>
+       
+    </body>
+</html>

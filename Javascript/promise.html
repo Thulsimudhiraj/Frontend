@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+
+        ////asyn code//////
+
+// function placeOrder(){
+        //     setTimeout(()=>{
+        //         console.log("place order")
+        //     })
+        // }
+        // function pay(){
+        //     console.log("order placedd")
+        // }
+        // placeOrder()
+        // pay()//pay executes first and later placeorder
+
+
+////////using callback////////
+
+        //   function placeOrder(callback){
+        //     setTimeout(()=>{
+        //         console.log("place order")
+        //         callback()
+        //     },2000)
+        //   }
+        //   function pay(){
+        //     console.log("payment done")
+        //   }
+        //   placeOrder(pay)
+
+
+///////////using promise////////
+
+        // function placeOrder() {
+        //     return new Promise(function(resolve,reject){//obj creatio  of constructor fun.
+        //         setTimeout(function(){
+        //         console.log("placing  order")
+        //         // resolve("order placed")//api will send some data-to send data resolve is used.
+        //         //resolve({orderid:"123",item:"vivo"})
+        //         reject("order not placed network error")//if data is failed
+        //     }, 2000)
+        //     })
+        // }
+        // function pay() {
+        //     console.log("payment done")
+        // }
+        // placeOrder().then(function(data){
+        //     console.log(data)//data goes to resolve
+        //     pay()
+        // }).catch(function(error){//catch block is used to display and idenify the error.
+        //     console.log("some error occured while placing order",error)
+        // })
+
+
+
+//promise has 3 states,pending,fulfilled,reject.
+//promise is a constructor fun that takes fun as a argmt
+//in place of return we can also use var p1= and placeorder() replaced by p1
+//inversion of control-diff b/w callback and promise.
+    </script>
+</body>
+
+</html>

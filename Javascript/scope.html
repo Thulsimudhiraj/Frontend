@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scope</title>
+    </head>    
+    <body>
+        <script>
+
+ //global scope//we can access outside ad inside fun as well-age declared globally
+
+            // var age=30
+            // console.log(age)
+            // function greet(){
+            //     console.log(age)
+            // }
+            // greet()
+
+//function scope
+            // function greet(){
+            //     var x=20
+            //     console.log(x)
+            // }
+            // greet()//20
+            // console.log(x)//reference error
+            //if we declare anything inside fun,that var are local to that fun only
+            //once the fun completes it's execution,all local var destroyed from memory.
+            //scope of global var is scope of dcmt
+
+
+//Block scope//let,const
+            // {
+            //     let a=28
+            //     console.log(a)//28
+            // }
+            // console.log(a)//error
+
+
+            // {
+            //     var a=28;
+            //     let b=16;
+            //     console.log(a,b)
+            // }
+            // console.log(a)
+            // console.log(b)
+
+
+ //Hoiting//js engine moves the declaration to the top of the prg
+            //  console.log(a)//js engine moves var top and declares a as undefined
+            //  var a=20;
+            //  console.log(a) 
+
+//fun expression-when we are assigning fun as a value to the var
+            // var a=function show(){
+            //     console.log("hello")
+
+            // }
+            // console.log(a())//hello,undef
+
+//calling fun as a parameter//when we call fun as a parameter,it's a higher harder function.
+            function greet(){
+                console.log("good morning")
+            }
+            function sayHello(a){
+               // console.log(a)
+                 //or
+                a()
+                console.log("hello")
+            }
+           //sayHello(greet())//greet is copied inside a (or)
+            sayHello(greet)
+</script>
+    </body>
+</html>
+
+
+<!-- JavaScript Hoisting
+
+• In JavaScript, variable and function names can be used
+before declaring it. The JavaScript compiler moves all
+the declarations of variables and functions at the top so
+that there will not be any error. This is called hoisting.
+• alert('x = ' + x); // display x = undefined
+• var x = 1; -->

@@ -1,0 +1,137 @@
+<!-- object:we can combine multuple var inside obj. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>    
+    <body>
+        <script>
+            // var a=30
+            // console.log(a,this,window)//window-opening tab,this-current obj,here current obj is window
+            // //30,window,window
+
+
+
+            // function sayHello(){
+            //     console.log("hello inside window")
+            // }
+            // this.sayHello()//this refers to window obj.
+
+
+            
+            // var name="srinu"
+            // var user={
+            //     name:"thulsi",
+            //     show:function(){
+            //         //this pts to user obj.//user is current obj
+            //          console.log(this.name,user.name)//thulsi thulsi
+            //         // console.log(window===this)
+            //     }
+            // }
+            // user.show();//user is calling show fun
+
+//if we declare fun inside obj,this pts to user obj,
+//if we declare fun outside obj,this pts to window obj
+
+            // var user={
+            //     name:"thulsi",
+            //     show:function(){
+            //        // console.log(this.name)//thulsi,thulsi pula
+            //        // console.log(this,this.name)
+            //        // console.log(this.name)//thulsi person//for apply
+            //     }
+            // }
+            //user.show()
+
+        //     var user2={
+        //         name:"thulsi pula"
+        //     }
+        //    // user.show.call(user1)
+
+        //     var person={
+        //         name:"person1"
+        //     }
+        //    // user.show.apply(person)
+
+        //     let result = user.show.bind(person);
+        //     console.log(result())//when it using we should comment user.show(),apply method
+        //     //returns fun and person1
+           
+
+//call,apply,bind invoking mechanisms of functions.
+//we can change the runtime context.
+//call,apply will bind our fun directly,but bind will give some new function.
+        
+
+         ///////////////////call,apply,bind//////////////////////////////////
+
+    //     let employee1={//obj literal
+    //         age:23,
+    //         name:"thulsi",
+    //         address:"hyd",
+    //         displayInfo:function(greet){
+    //             console.log("name==",this.name,greet);
+    //             console.log("name==",this.age,greet);
+    //             console.log("name==",this.address,greet);
+    //         }
+    //     }
+    //     //employee1.displayInfo();//display employee1 data
+
+    //     let employee2={
+    //         age:24,
+    //         name:"thulsi1",
+    //         address:"nlg"
+    //     }
+    //    employee1.displayInfo.call(employee2,"gd mrng")//displays employee2 data
+    //    employee1.displayInfo.apply(employee2,["gd mrng"])//displays employee2 data
+    //    //let fn=employee1.displayInfo.bind(employee2)
+       //console.log(fn())//displays employee2
+
+
+//diff b/w call and apply is,if we want to pass some extra parameters to fun,while invoking we pass
+//call-we pass as string,apply-we pass as array
+
+
+
+//////////////////constructor function////////////////////
+    //1 //   function Employee(){
+        //     this.name="emp1",
+        //     this.age=25
+        //   }
+        //   let emp1=new Employee()//new used to create new obj.
+        //   let emp2=new Employee()
+        //   console.log(emp1,emp2)
+
+
+    //2 // function Employee(name,age){//name and age are properties
+        //     this.name=name,
+        //     this.age=age
+        //   }
+        //   let emp1=new Employee("thulsi",23)//new used to create new obj.
+        //   let emp2=new Employee("srinu",25)
+        //   console.log(emp1,emp2)
+
+
+          
+        function Employee(name,age){
+          console.log(this);
+          this.name=name,
+          this.age=age
+          this.showInfo = function(){
+            console.log("info==",this.name,this.age)
+          }
+        }
+        let emp1 = new Employee("thulsi",23);
+        let emp2 = new Employee("srinu",25);
+        emp1.showInfo();
+        emp2.showInfo();
+
+        </script>
+    </body>
+</html>
+
+<!-- • Explicit Function Binding
+• The call() and apply() methods are predefined JavaScript methods.
+• They can both be used to call an object method with another object as argument.
+• With the bind() method, an object can borrow a method from another
+object. -->

@@ -1,0 +1,34 @@
+<!-- box sizing
+content box:default:total w&h calculated by excluding values of padding and border
+border box:total w&h calculated along with value of padding and border -->
+<!-- width = width+ left padding+right padding+border 
+    height = height + top padding +bootom padding + border  --> 
+<!doctype html>
+<html>
+    <head>
+        <style>
+            
+            *{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .box1{
+                width:122px;
+                height:122px;
+                background-color: red;
+                padding:10px;
+                border:10px solid;
+                box-sizing: border-box;
+            }
+        </style>
+        <title>
+            Box sizing
+        </title>
+    </head>
+    <body>
+        <div class="box1">
+
+        </div>
+    </body>
+</html>

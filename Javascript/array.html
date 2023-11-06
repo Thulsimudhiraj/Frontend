@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        <script>
+
+//             let a1=[1,2,3,4,5]//Normal array
+//             console.log(typeof(a1))
+//             console.log(a1)
+
+
+
+//             let a=[3,"thulsi",true]//array can store heretogeneous elmts in js
+//             console.log(a)
+
+            
+//             // let a2=new Array(4,5,6,7,8)//with constructor fun
+//             // console.log(a2)
+//             // console.log(Array.isArray(a2))//to check whether it's array r not
+
+
+///////////////to access array/////////////////
+        
+//             for(i=0;i<a1.length;i++){
+//                 console.log(a1[i])
+//             }
+//             console.log(a1[2])//to access particluar index value
+
+
+
+////////////Array Methods//////////push,pop,shift,unshift
+//push-add elmt at end          //unshift-add elmt at first
+//pop-retrive elmt from end     //shift-retrive elmt at starting
+        
+        //   let a=[30,40,50,60,70]
+        
+        //   a.push("thulsi")
+        //   console.log(a)
+        //   a.pop()
+        //   console.log(a)
+        //   a.shift()
+        //   console.log(a)
+        //   a.unshift("srinu")
+        //   console.log(a)
+
+//splice method is used to delete the elmt
+//for deleting we shoulf find the index firs
+         
+        //  let a=[30,40,50,60,70];//if we give indexOf for the value which is not mentioned in array,it gives -1
+        //  let index=a.indexOf(50)
+        //  console.log(index)
+        //  a.splice(index,2)//number represents how many elmts you want to remove
+        //  console.log(a)
+
+
+//////////JavaScript Strings////////////////
+// string is a seq of letters,no.s,special characters and arithmetic values or combination of all
+// str is cretaed by enclosing the string literal,single or double quotes.
+
+       let str='hello iam thulsi'
+       console.log(str.length)
+
+       let str1='hello' 
+       let str2='gd mrng'
+       console.log(str1+str2)
+       console.log(str.indexOf("thulsi"))
+       console.log(str.slice(1,4))//remove certain part
+       str3=str.replace('hello','hi')
+       console.log(str3)
+       console.log(str.charAt(1))
+        </script>
+    </body>
+</html>

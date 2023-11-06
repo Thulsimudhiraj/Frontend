@@ -1,0 +1,78 @@
+<!-- using Js ,we can perform the event handlers. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handlers</title>
+    </head>    
+    <body>
+        <button onclick="clickMe()">clickme</button>
+        <button onmouseover="overMe()">overme</button>
+        <select onchange="getSelected(event)">
+             <option>BTech</option>
+             <option>MTech</opton>
+        </select>
+        <script>
+          function clickMe(){
+            console.log("clicked")
+          }
+          function overMe(){
+            console.log("overed me")
+          }
+          function getSelected(event){
+            console.log(event.target.value)
+          }
+        </script>
+    </body>
+</html>
+
+<!-- An event is something that happens when user interact with the
+web page, such as when he clicked a link or button, entered
+text into an input box or textarea, made selection in a select
+box.
+• When an event occur, you can use a JavaScript event handler
+(or an event listener) to detect them and perform specific task or
+set of tasks.
+• <button type="button" onclick="alert('Hello
+World!')">Click Me</button> -->
+
+
+<!-- • Contextmenu Event (oncontextmenu): The contextmenu event occurs
+when a user clicks the right mouse button on an element to open a
+context menu.
+
+• <button type="button" oncontextmenu="alert('You have right-
+clicked a button!');">Right Click on Me</button>
+
+• Click Event (onclick): The click event occurs when a user clicks
+on an element on a web page
+• <button type="button" onclick="alert('You have clicked a
+button!');">Click Me</button>
+• Mouseover Event (onmouseover): The mouseover event occurs when a
+user moves the mouse pointer over an element.
+• <button type="button" onmouseover="alert('You have placed mouse
+pointer over a button!');">Place Mouse Over Me</button>
+• Mouseout Event (onmouseout): The mouseout event occurs when a
+user moves the mouse pointer outside of an element.
+• <button type="button" onmouseout="alert('You have moved out of
+the button!');">Place Mouse Inside Me and Move Out</button> -->
+
+
+<!-- Keyboard Events
+Keydown Event (onkeydown): The keydown event occurs when the user presses down a key on the
+keyboard.
+<input type="text" onkeydown="alert('You have pressed a key inside text input!')">
+Change Event (onchange): The change event occurs when a user changes the value of a form element.
+<select onchange="alert('You have changed the selection!');">
+<option>Select</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+Submit Event (onsubmit)
+The submit event only occurs when the user submits a form on a web page.
+<form action="action.php" method="post" onsubmit="alert('Form data will be submitted to the
+server!');">
+<label>First Name:</label>
+<input type="text" name="first-name" required>
+<input type="submit" value="Submit">
+</form> -->

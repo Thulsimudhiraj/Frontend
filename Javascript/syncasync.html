@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>syncasync demo</title>
+</head>
+
+<body>
+    <script>
+        // console.log("1")
+        // setTimeout(function(){//asyn-moves to seperate call by queque-whcih waits for sometime.
+        //     console.log("2")
+        // },3000)
+        // console.log("3")
+
+
+
+        // function sayHello(){//hello gd mrng and hello
+        //     console.log("hello")
+        // }
+        // // setTimeout(function(){
+
+        // // },300)
+        // function greet(msg,fn){
+        //     console.log("hello",msg)
+        //     fn()
+        // }
+        // greet("good morning",sayHello)//we r passing fun as a parameter to greet and invoking it
+        // //giving control to greet function-third party library.
+
+
+
+        // function getUsers(fn){
+        //     setTimeout(()=>{
+        //         console.log("fetch user")
+        //         fn({
+        //             name:"thulsi",
+        //             age:"23",
+        //             id:"203"
+        //         })
+
+
+        //     },0)
+        // }
+        // function showUser(user){
+        //     console.log("user info received from db",user)
+        // }
+        // getUsers(showUser)
+
+
+
+
+        // function show(){
+        //     setTimeout(function(){
+        //        console.log("hello inside show function")
+        //     },0)
+        // }
+        // function display(){
+        //     console.log("hello inside display function")
+        // }
+        // show()
+        // display()
+
+
+
+        //1.actual asyn code//////////
+
+
+        // function getAllPost() {
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(function (res) {
+        //             console.log("i got the data")
+        //         })
+        // }
+
+        // function displayPostData() {//invoking call depends on getallpost
+        //    console.log("i am displaying data")
+        // }
+        // getAllPost();//asyn call,display executes first and then getallpost
+        // displayPostData()//to handle this we use callback,for this we should pass fun as parameter.
+
+
+        ///2//////using callback
+
+        // function getAllPost(callback) {//fn callback
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(function (res) {
+        //             console.log("i got the data")
+        //             callback()
+        //         })
+        // }
+
+        // function displayPostData() {
+        //     console.log("i am displaying data")
+        // }
+        // getAllPost(displayPostData);//passing display as a parameter.
+
+        //using callback it's tough to maintain and debug the code.
+
+
+
+        //if we have to use more than one callback when we have more asyn codes.
+
+
+        // function getAllPost(callback, callback2) {
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')//network call,this call goes to some server
+        //         .then(function (res) {//json place server and from there it's tries to fetch the data.
+        //             console.log("i got the data")
+        //             callback(callback2);
+        //         })
+        // }
+
+        // function displayPostData(callback2) {
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(function (res) {
+        //             console.log("i am displaying data")
+        //             callback2();
+        //         })
+        // }
+
+        // function finalResult() {
+        //     console.log("execute me once all done")
+        // }
+        // getAllPost(displayPostData, finalResult);
+
+
+
+
+
+        // function getAllPost(callback) {
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(function (res) {
+        //             console.log("i got the data")
+        //             callback();
+        //         })
+        // }
+
+        // function displayPostData() {//invoking call depends on getallpost
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(function (res) {
+        //             console.log("i am displaying data")
+        //             console.log("execute only once you finsh all code")
+        //         })
+        // }
+        // getAllPost(displayPostData);
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+all the api,network,db calls are asynchronous calls.
+there r 3 techniques in js to handle asyn code
+callback,promise,rest
+
+callback:we call one fun and that fun called from other fun. -->

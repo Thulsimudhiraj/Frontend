@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>oops</title>
+    </head>
+    <body>
+        <script>
+            // class Person{//class a blue print
+            //     constructor(name,age){
+            //         this.name=name,//data members
+            //         this.age=age
+            //     }
+            //     show(){//member function
+            //         console.log(this.name,this.age)
+            //     }
+            //     displayCaps(){//member fun
+            //         this.name=this.name.toUpperCase()
+            //     }
+            // }
+            // let p1 = new Person("thulsi",23);//obj-instant of class
+            // let p2 = new Person("srinu",25);
+            // p1.displayCaps()
+            // p1.show();
+            // p2.show();
+
+//inheritancee
+
+            // class Person{//class a blue print
+            //     constructor(name,age){//con invok whenever we create instant of class
+            //         this.name=name,//data members
+            //         this.age=age
+            //     }
+            //     show(){//member function
+            //         console.log(this.name,this.age)
+            //     }
+            //     displayCaps(){//member fun
+            //         this.name=this.name.toUpperCase()
+            //     }
+            // }
+            // class Employee extends Person{
+            //     constructor(name,age,companyName,salary){
+            //         super(name,age)//refers to parent class
+            //         this.companyName=companyName,
+            //         this.salary=salary
+            //     }
+            //     showEmpInfo(){
+            //         console.log(this.companyName,this.salary)
+            //     }
+            // }
+            // let emp1 = new Employee("thulsi",23,"wipro",23000);//obj-instant of class
+            // let emp2 = new Employee("srinu",25,"Infosys",25000);
+            // emp1.displayCaps()
+            // emp1.show()
+            // emp1.showEmpInfo()
+
+            // emp2.show()
+            // emp2.showEmpInfo()
+      
+            
+ ////////////Method Overriding//////////////////////
+
+             class Person{//class a blue print
+                constructor(name,age){//con invok whenever we create instant of class
+                    this.name=name,//data members
+                    this.age=age
+                }
+                show(){//member function
+                    console.log(this.name,this.age)
+                }
+                displayCaps(){//member fun
+                    this.name=this.name.toUpperCase()
+                }
+                sayHello(){
+                    console.log("Hello from Parent")
+                }
+            }
+            class Employee extends Person{
+                constructor(name,age,companyName,salary){
+                    super(name,age)//refers to parent class
+                    this.companyName=companyName,
+                    this.salary=salary
+                }
+                showEmpInfo(){
+                    console.log(this.companyName,this.salary)
+                }
+                sayHello(){
+                    super.sayHello();
+                    console.log("Hello from Child")
+                }
+            }
+            let emp1 = new Employee("thulsi",23,"wipro",23000);//obj-instant of class
+            let emp2 = new Employee("srinu",25,"Infosys",25000);
+            emp1.displayCaps()
+            emp1.show()
+            emp1.showEmpInfo()
+
+            emp2.show()
+            emp2.showEmpInfo()    
+            emp1.sayHello()//parent class fun will be overridden by child class fun 
+        </script>
+    </body>
+
+</html>
+<!-- 
+constructor:initialize data to a data member. -->

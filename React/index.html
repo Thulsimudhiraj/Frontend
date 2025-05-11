@@ -1,0 +1,75 @@
+<!-- react is a ui library. 
+-used to built user interface.
+-react is a js library,it's not a framework
+-we have to load third party library for react router
+-react gives flexibility to create our component more quickly,easily
+-react is made up of jsx-we will write the code mix with js and html in one file(js&external html)
+-for writing code in reactjs we need one kind of transpiler which converts jsx code to js and hml language.
+bacause browser understands onl html,css,js
+-babel-transpiler-converts from jsx->js
+-react maintains one vdom,if we change something in real dom it's a expensive process
+-so for this it's maintain a duplicate copy of RDOM that is VDOM and it first tries to update VDOM,
+,and runs one algorithm that is diffing algorithm ,it checks which part of node is updated in vdom.
+only that part update in real dom 
+-in react we will create everything as a component so that we can reuse it
+when we update the data,the react will re-render everytime-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Demo</title>
+</head>
+
+<body id="box1">
+    <!-- <div id="box1"></div> -->
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"
+        integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+          const age=30
+          const username="thulsi"
+        const header = (
+            <div>
+                <h1>Hello my age is{age}</h1>
+                <h2>Hello Iam {username}</h2>
+            </div>
+        )
+        const footer = (
+            <div>
+                @copyright
+            </div>
+        )
+        const main = (
+                <div>main section
+                    <ul>
+                        <li>home</li>
+                        <li>about us</li>
+                        <li>contact us</li>
+                        </ul>
+                    </div>
+            )
+        const app = (
+            <div>
+                {header}
+                {main}
+                {footer}
+            </div>
+        )
+        const root = document.getElementById("box1");
+        ReactDOM.render(app, root)//render create elmt and replace actual content in box1.
+        //app->header is where we have to crete the header in root or body.
+        //root is a container or id where we have to place the component.
+    </script>
+</body>
+
+</html>
+<!-- render-render the content on id -->
+<!-- loading app on box -->
+
+reactdom jsx interpreted into 2 funs 1.crated div,2.appended div inside body
+in react we no need to write create,append.. reactdom will take care of it.
+here we are writing jsx code
